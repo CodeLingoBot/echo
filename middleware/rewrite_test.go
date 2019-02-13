@@ -39,7 +39,7 @@ func TestRewrite(t *testing.T) {
 	assert.Equal(t, "/new users", req.URL.Path)
 }
 
-// Issue #1086
+// TestEchoRewritePreMiddleware Issue #1086
 func TestEchoRewritePreMiddleware(t *testing.T) {
 	e := echo.New()
 	r := e.Router()
@@ -63,7 +63,7 @@ func TestEchoRewritePreMiddleware(t *testing.T) {
 	assert.Equal(t, 200, rec.Code)
 }
 
-// Issue #1143
+// TestRewriteWithConfigPreMiddleware_Issue1143 Issue #1143
 func TestRewriteWithConfigPreMiddleware_Issue1143(t *testing.T) {
 	e := echo.New()
 	r := e.Router()

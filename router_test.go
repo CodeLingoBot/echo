@@ -539,7 +539,7 @@ func TestRouterTwoParam(t *testing.T) {
 	assert.Equal(t, "1", c.Param("fid"))
 }
 
-// Issue #378
+// TestRouterParamWithSlash Issue #378
 func TestRouterParamWithSlash(t *testing.T) {
 	e := New()
 	r := e.router
@@ -741,7 +741,7 @@ func TestRouterPriority(t *testing.T) {
 	assert.Equal(t, "joe/books", c.Param("*"))
 }
 
-// Issue #372
+// TestRouterPriorityNotFound Issue #372
 func TestRouterPriorityNotFound(t *testing.T) {
 	e := New()
 	r := e.router
@@ -807,7 +807,7 @@ func TestRouterParamNames(t *testing.T) {
 	assert.Equal(t, "1", c.Param("fid"))
 }
 
-// Issue #623
+// TestRouterStaticDynamicConflict Issue #623
 func TestRouterStaticDynamicConflict(t *testing.T) {
 	e := New()
 	r := e.router
@@ -864,7 +864,7 @@ func TestRouterGitHubAPI(t *testing.T) {
 	testRouterAPI(t, gitHubAPI)
 }
 
-// Issue #729
+// TestRouterParamAlias Issue #729
 func TestRouterParamAlias(t *testing.T) {
 	api := []*Route{
 		{http.MethodGet, "/users/:userID/following", ""},
@@ -874,7 +874,7 @@ func TestRouterParamAlias(t *testing.T) {
 	testRouterAPI(t, api)
 }
 
-// Issue #1052
+// TestRouterParamOrdering Issue #1052
 func TestRouterParamOrdering(t *testing.T) {
 	api := []*Route{
 		{http.MethodGet, "/:a/:b/:c/:id", ""},
@@ -896,7 +896,7 @@ func TestRouterParamOrdering(t *testing.T) {
 	testRouterAPI(t, api3)
 }
 
-// Issue #1139
+// TestRouterMixedParams Issue #1139
 func TestRouterMixedParams(t *testing.T) {
 	api := []*Route{
 		{http.MethodGet, "/teacher/:tid/room/suggestions", ""},

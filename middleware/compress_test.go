@@ -76,7 +76,7 @@ func TestGzipErrorReturned(t *testing.T) {
 	assert.Empty(t, rec.Header().Get(echo.HeaderContentEncoding))
 }
 
-// Issue #806
+// TestGzipWithStatic Issue #806
 func TestGzipWithStatic(t *testing.T) {
 	e := echo.New()
 	e.Use(Gzip())
